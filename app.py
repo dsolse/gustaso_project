@@ -6,6 +6,8 @@ from models.guapos import Guapos
 from routes.auth import auth
 from routes.vip import vip
 from db.login import login_manager
+from flask_migrate import Migrate
+from db.db_engine import db
 
 app = Flask(__name__)
 
@@ -18,6 +20,7 @@ app.register_blueprint(vip)
 SQLAlchemy(app)
 Bcrypt(app)
 login_manager.init_app(app)
+Migrate(app, db)
 
 # creando las tablas con los settings dados
 with app.app_context():
