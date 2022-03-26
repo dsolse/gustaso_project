@@ -29,6 +29,9 @@
             <td>{{ row.apellido }}</td>
             <td>{{ row.guapura }}</td>
             <td>{{ row.soltero }}</td>
+	    {% if user.ispapucho %}
+		<td><a href="{{url_for('vip.change_guapura', id_guapo=row.id)}}" >change guapura</a></td>
+	    {% endif %}
         </tr>
         {% endfor %}
     </table>

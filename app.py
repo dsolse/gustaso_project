@@ -1,8 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from db.db_engine import db
-from models.guapos import Guapos
 from routes.auth import auth
 from routes.vip import vip
 from db.login import login_manager

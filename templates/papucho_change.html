@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Papucho_change</title>
+</head>
+
+<body>
+    <form action="{{ url_for('vip.change_guapura', id_guapo=user.id) }}" method="post">
+        {{ form.hidden_tag()  }}
+        {{ form.apellido.label  }}
+        {{form.apellido}}
+        {{form.guapura.label }}
+        {{form.guapura}}
+        {{form.submit}}
+    </form>
+</body>
+
+</html>
